@@ -1,0 +1,6 @@
+[submodule "up-and-running"]
+	path = up-and-running
+	url = git@github.com:apinter/up-and-running.git
+[submodule "system-update"]
+	path = system-update
+	url = git@github.com:apinter/system-update.git
