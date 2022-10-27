@@ -1,5 +1,20 @@
 # Ansible - pt2
 
+## ansible.cfg
+
+[Ansible docs](https://docs.ansible.com/ansible/latest/reference_appendices/config.html#ansible-configuration-settings-locations)
+
+Example for ansible.cfg stored in the playbook folder:
+
+```ini
+[defaults]
+nocows = True
+roles_path = ./roles:/etc/ansible/roles
+inventory = inventory
+become = true
+stdout_callback = yaml
+```
+
 ## Roles
 
 Just an easy way to structure plays, files, templates etc.
@@ -16,21 +31,6 @@ There are other ways to go about it, but considering this is the upstream standa
 - templates – location for ansible templates. These are files that are written in Jinja2 templating language and can be modified as the machine is provisioned. Note that you can customize a template for any structure or configuration needed.
 - tests – this is where you would place any verification mechanism for the results of your role
 - vars – directory used to store variables for the role. Variable stored here have higher priority than those stored on the defaults directory.
-
-## ansible.cfg
-
-[Ansible docs](https://docs.ansible.com/ansible/latest/reference_appendices/config.html#ansible-configuration-settings-locations)
-
-Example for ansible.cfg stored in the playbook folder:
-
-```ini
-[defaults]
-nocows = True
-roles_path = ./roles:/etc/ansible/roles
-inventory = inventory
-become = true
-stdout_callback = yaml
-```
 
 ## Ansible-vault
 
